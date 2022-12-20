@@ -6,11 +6,10 @@ const pool = require("./db");
 app.use(cors());
 app.use(express.json());
 
-app.get("/quotes", async (res, req) => {
+app.get("/quotes", async (req, res) => {
     try {
         const allQuotes = await pool.query("SELECT * FROM quotes");
-        res = allQuotes.rows
-        console.log(res);
+        res.json(allQuotes.rows)
     } catch (err) {
         console.log(err.message);
     }
