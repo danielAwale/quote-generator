@@ -17,6 +17,14 @@ const Home = () => {
   return (
     <>
     <button onClick={(e) => generateQuote(e)}>Generate</button>
+    {quotes.map(item => {
+        return (
+            <div>
+                <h6>{item.quotes}</h6>
+                <h3>{item.author}</h3>
+            </div>
+        )
+    })}
     </>
     
   )
