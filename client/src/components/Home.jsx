@@ -4,24 +4,24 @@ import { useEffect } from 'react';
 const Home = () => {
     const [quotes, setQuotes] = useState([])
 
-    const generateQuote = (e) => {
-        e.preventDefault();
-
     useEffect(() => {
         fetch('http://localhost:5000/quotes')
         .then(response => response.json())
         .then(data => {
-            let quote =  quotes[Math.floor(Math.random() * quotes.length)];
-            setQuotes(data[quote])
+            setQuotes(data)
         })
         .catch(error => console.log(error.message))
     },[])
 
-}
 
   return (
     <>
-    <button onClick={(e) => generateQuote(e)}>Generate</button>
+    {quotes.map(quote => { return (
+    <div>
+    <h6>{quote.quotes}</h6>
+    <h3>{quote.author}</h3>
+    </div>
+    )})}
     </>
   )
 }
