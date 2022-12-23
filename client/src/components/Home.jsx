@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 const Home = () => {
     const [quotes, setQuotes] = useState([])
 
+    // const quote = quotes[Math.floor(Math.random() * quotes.length)];
+
     useEffect(() => {
         fetch('http://localhost:5000/quotes')
         .then(response => response.json())
@@ -11,22 +13,21 @@ const Home = () => {
         .catch(error => console.log(error.message))
     },[])
 
-    const generateQuote = (e) => {
-        e.preventDefault();
-    }
+    // const generateQuote = (e) => {
+    //     e.preventDefault();
+    //     return quote;
+    // }
   return (
     <>
-    <button onClick={(e) => generateQuote(e)}>Generate</button>
-    {quotes.map(item => {
-        return (
-            <div>
-                <h6>{item.quotes}</h6>
-                <h3>{item.author}</h3>
-            </div>
-        )
-    })}
+    <button>Generate</button>
+
+    {quotes.map((item) => { return (
+        <div>
+            <h3>{item.quotes}</h3>
+            <h5>{item.author}</h5>
+        </div>
+    )})}
     </>
-    
   )
 }
 
