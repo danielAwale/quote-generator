@@ -1,8 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { useEffect } from 'react';
 
 const Home = () => {
+    const [quotes, setQuotes] = useState([])
+
+    const generateQuote = (e) => {
+        e.preventDefault();
+    }
   return (
-    <div>This is the Home Page!</div>
+    <button onClick={(e) => generateQuote(e)}>Generate</button>
   )
 }
 
