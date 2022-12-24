@@ -63,3 +63,27 @@ INSERT INTO quotes (quotes, author)
 VALUES ('I never dreamed about success, I worked for it.', 'Estee Lauder');
 INSERT INTO quotes (quotes, author) 
 VALUES ('Success seems to be connected with action. Successful people keep moving. They make mistakes but they do not quit.', 'Conrad Hilton');
+INSERT INTO quotes (quotes, author) 
+VALUES ('Success is stumbling from failure to failure with no loss of enthusiasm.', 'Winston Churchill');
+INSERT INTO quotes (quotes, author) 
+VALUES ('The only limit to our realization of tomorrow will be our doubts of today.', 'Franklin D. Roosevelt');
+INSERT INTO quotes (quotes, author) 
+VALUES ('Be persistent and never give up hope.', 'George Lucas');
+INSERT INTO quotes (quotes, author) 
+VALUES ('The only way to do great work is to love what you do.', 'Steve Jobs');
+INSERT INTO quotes (quotes, author) 
+VALUES ('It is never too late to be what you might have been.', 'George Eliot');
+INSERT INTO quotes (quotes, author) 
+VALUES ('I can accept failure, everyone fails at something. But I cannot accept not trying.', 'Estee Lauder');
+INSERT INTO quotes (quotes, author) 
+VALUES ('So we beat on, boats against the current, borne back ceaselessly into the past.', 'F. Scott Fitzgerald');
+INSERT INTO quotes (quotes, author) 
+VALUES ('I have failed over and over again in my life. And that is why I succeed.', 'Michael Jordan');
+INSERT INTO quotes (quotes, author) 
+VALUES ('Never let your head hang down. Never give up and sit down and grieve. Find another way.', 'Satchel Paige');
+INSERT INTO quotes (quotes, author) 
+VALUES ('Wisdom is always an overmatch for strength.', 'Phil Jackson');
+INSERT INTO quotes (quotes, author) 
+VALUES ('Never give up! Failure and rejection are only the first step to succeeding.', 'Jim Valvano');
+INSERT INTO quotes (quotes, author) 
+VALUES ('The harder the battle, the sweeter the victory.', 'Les Brown');
