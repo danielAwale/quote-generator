@@ -23,13 +23,16 @@ const Home = () => {
   return (
     <>
 
-    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{quotes.quotes}</h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{quotes.author}</p>
-        <button class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={() => generateQuote()}>
-            Generate
-        </button>
-    </div>
+<div class="flex justify-center">
+  <div class="block p-6 rounded-lg shadow-lg max-w-3xl item-center">
+    <h5 class="text-slate-400 text-4xl leading-tight font-medium mb-2">{quotes.author}</h5>
+    <p class="text-slate-300 text-2xl mb-4">
+      {quotes.quotes}
+    </p>
+    <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" onClick={()=> generateQuote()}>Generate</button>
+  </div>
+</div>
+
     </>
   )
 }
