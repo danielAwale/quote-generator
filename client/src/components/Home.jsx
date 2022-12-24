@@ -23,8 +23,8 @@ const Home = () => {
   return (
     <>
 
-<div class="flex justify-center item-center">
-  <div class="rounded-lg shadow-lg max-w-3xl item-center">
+<div className="m-auto h-screen w-1/2">
+  <div class="rounded-lg shadow-lg max-w-3x">
     <h5 class="text-slate-300 text-4xl leading-tight font-medium mb-2">{quotes.author}</h5>
     <p class="text-slate-200 text-2xl mb-4">
       {quotes.quotes}

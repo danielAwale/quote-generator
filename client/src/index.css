@@ -4,4 +4,7 @@
 
 body {
 background-image: url('../public/bgimage.jpeg');
+width: 100%;
+height: 100vh;
 }
+
