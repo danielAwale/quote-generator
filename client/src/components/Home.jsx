@@ -11,17 +11,20 @@ const Home = () => {
             setQuotes(data)
         })
         .catch(error => console.log(error.message))
-    },[])
+    },[]);
+
+    // const generateQuote = (e) => {
+    //     e.preventDefault();
+    //     setQuotes(quotes[Math.floor(Math.random() * quotes.length)])
+    // }
 
 
   return (
     <>
-    {quotes.map(quote => { return (
-    <div>
-    <h6>{quote.quotes}</h6>
-    <h3>{quote.author}</h3>
-    </div>
-    )})}
+    {/* <button onClick={(e) => generateQuote(e)}>Generate</button> */}
+    <div>{quotes[0].quotes}</div>
+    <div>{quotes[0].author}</div>
+
     </>
   )
 }
