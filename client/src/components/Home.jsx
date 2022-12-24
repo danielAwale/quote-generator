@@ -4,27 +4,27 @@ import { useEffect } from 'react';
 const Home = () => {
     const [quotes, setQuotes] = useState([])
 
-    useEffect(() => {
+    const generateQuote = () => {
+
         fetch('http://localhost:5000/quotes')
         .then(response => response.json())
         .then(data => {
-            setQuotes(data)
+            setQuotes(data[Math.floor(Math.random() * data.length)])
         })
         .catch(error => console.log(error.message))
-    },[]);
 
-    // const generateQuote = (e) => {
-    //     e.preventDefault();
-    //     setQuotes(quotes[Math.floor(Math.random() * quotes.length)])
-    // }
+    }
+    
+    useEffect(() => {
+        generateQuote()
+    }, [])
 
 
   return (
     <>
-    {/* <button onClick={(e) => generateQuote(e)}>Generate</button> */}
-    <div>{quotes[0].quotes}</div>
-    <div>{quotes[0].author}</div>
-
+    <button onClick={() => generateQuote()}>Generate</button>
+    <div>{quotes.quotes}</div>
+    <div>{quotes.author}</div>
     </>
   )
 }
